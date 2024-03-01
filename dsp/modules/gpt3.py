@@ -258,6 +258,7 @@ def v1_cached_gpt3_request_v2_wrapped(**kwargs):
 def v1_cached_gpt3_turbo_request_v2(**kwargs):
     if "stringify_request" in kwargs:
         kwargs = json.loads(kwargs["stringify_request"])
+    print(kwargs)
     return openai.chat.completions.create(**kwargs)
 
 
